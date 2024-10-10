@@ -1,0 +1,115 @@
+dependencies:
+  espressif/cmake_utilities:
+    component_hash: 7e20811092150b668a710cfbf43164721b23bac766811f4e68036450a3265fba
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.1'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.0.0
+  espressif/esp-dsp:
+    component_hash: 3e7bbd487f1357a1d4944d0c85966d049501ea281b8a4c7f93f7cfedd5b7f23d
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.2'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.4.12
+  espressif/esp_io_expander:
+    component_hash: fbc0de4082fc7c207dc98a93a0ed83d1a929a4ecee83cc567afb406f3ee6d4a6
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.4.2'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.0.1
+  espressif/esp_io_expander_tca9554:
+    component_hash: e9e49ddb1038c2b54b13c51b5e3e6dbdd10a878959c8ab0e0a7c8206316add61
+    dependencies:
+    - name: espressif/esp_io_expander
+      registry_url: https://components.espressif.com/
+      require: private
+      version: ^1.0.1
+    - name: idf
+      require: private
+      version: '>=4.4.2'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.0.1
+  espressif/jsmn:
+    component_hash: d80350c41bbaa827c98a25b6072df00884e72f54885996fab4a4f0aebce6b6c3
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.3'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.1.0
+  espressif/nghttp:
+    component_hash: c52b83cc3d1083ae669751534ea4f7445974b86d91d49a5273bdb0fbf87f34d6
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.62.1
+  espressif/usb_device_uac:
+    component_hash: d84300e48d85793db0e300083cebab5084e69e4a63231857fb8b97517dbc3007
+    dependencies:
+    - name: espressif/cmake_utilities
+      registry_url: https://components.espressif.com/
+      require: private
+      version: '*'
+    - name: idf
+      require: private
+      version: '>=4.4'
+    - name: leeebo/tinyusb_src
+      registry_url: https://components.espressif.com/
+      require: private
+      version: '>=0.16.0~5'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    targets:
+    - esp32s2
+    - esp32s3
+    - esp32p4
+    version: 0.2.0
+  idf:
+    source:
+      type: idf
+    version: 5.2.3
+  leeebo/tinyusb_src:
+    component_hash: f8a386b696474c2b20482b662319200e4a2ce9cae8fa3ae7830d3929f03780c8
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.4'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    targets:
+    - esp32s2
+    - esp32s3
+    - esp32p4
+    version: 0.16.0~6
+direct_dependencies:
+- espressif/esp-dsp
+- espressif/esp_io_expander_tca9554
+- espressif/jsmn
+- espressif/nghttp
+- espressif/usb_device_uac
+- idf
+manifest_hash: 8bc630fd9d786e02f2693e26991339ae436664941b7115351c12b27842dd2fad
+target: esp32s3
+version: 2.0.0

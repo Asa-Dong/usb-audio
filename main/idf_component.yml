@@ -1,0 +1,5 @@
+dependencies:
+  usb_device_uac:
+    version: "0.*"
+  espressif/esp_io_expander_tca9554:
+    version: "^1.0.1"
