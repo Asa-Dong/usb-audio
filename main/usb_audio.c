@@ -82,7 +82,7 @@ void app_main(void) {
         i2s_stream_reader = i2s_stream_init(&i2s_cfg2);
     }
 
-    // io_expander int
+    // io_expander tca9554 init
     esp_io_expander_new_i2c_tca9554(0, ESP_IO_EXPANDER_I2C_TCA9554_ADDRESS_000, &io_expander);
     esp_io_expander_set_dir(io_expander, IO_EXPANDER_PIN_NUM_0 | IO_EXPANDER_PIN_NUM_1 | IO_EXPANDER_PIN_NUM_7,
                             IO_EXPANDER_OUTPUT);
